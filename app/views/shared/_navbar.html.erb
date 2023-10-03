@@ -20,7 +20,11 @@
       <ul class="navbar-nav">
         <li class="nav-item"><%= link_to "What's New", announcements_path, class: "nav-link #{unread_announcements(current_user)}" %></li>
         <% if user_signed_in? %>
-
+          <li class="nav-item">
+            <%= link_to companies_path, class: "nav-link" do %>
+              <span>Companies</span>
+            <% end %>
+          </li>
           <li class="nav-item">
             <%= link_to notifications_path, class: "nav-link" do %>
               <span><i class="far fa-bell" aria-hidden="true"></i></span>
